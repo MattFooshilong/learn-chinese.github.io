@@ -12,3 +12,5 @@ What is used:
 - Functions, loops
 - Materialize (an alternative to Bootstrap)
 - Flexbox in CSS
+
+Still work-in-progress with the style and looks
