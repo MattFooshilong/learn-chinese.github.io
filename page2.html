@@ -1,126 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="style.css">
 	<!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="materialize.css"  media="screen,projection"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize.css" media="screen,projection" />
 	<title>Library of Chinese Words</title>
 </head>
+
 <body>
 
-<div class="container">
+	<div class="container">
 
-	<div class="row">
-		<form class="col s12">
-			<div class="row">
-				<div class="input-field col s1 offset-s3">
-					<input  id="chineseWord_input" type="text" class="validate">
-					<label for="chineseWord_input">word </label>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s1 offset-s3">
+						<input id="chineseWord_input" type="text" class="validate">
+						<label for="chineseWord_input">word </label>
+					</div>
+					<div class="input-field col s1">
+						<input id="pinyin_input" type="text" class="validate">
+						<label for="pinyin_input">pinyin </label>
+					</div>
+					<button class="btn waves-effect" type="button" name="action" onclick="newWordBtn()">Submit
+						<i class="material-icons right">send</i>
+					</button>
+					<div class="error">Fix this later</div>
+					<p id="wordExist"></p>
 				</div>
-				<div class="input-field col s1">
-					<input id="pinyin_input" type="text" class="validate">
-					<label for="pinyin_input">pinyin </label>
-				</div>
-				<button class="btn waves-effect" type="button" name="action" onclick="newWordBtn()">Submit
-		 		<i class="material-icons right">send</i>
-				</button>
-				<div class="error">Fix this later</div>
-				<p id="wordExist"></p>
-			</div>
-		</form>
+			</form>
 		</div>
 		<!--Below btn is optional. Use if error popups-->
 		<button class="btn waves-effect" type="button" name="action" onclick="addRow()">Add Row
 		</button>
 
-	<table id="mainTable" class="highlight responsive-table">
-		<thead class="red lighten-3">
-			<!--headers, row0-->
-			<tr>
-				<th>Word</th>
-				<th>Pinyin</th>
-				<th>Meaning</th>
-				<th>Use in a sentence</th>
-			</tr>
-		</thead>
+		<table id="mainTable" class="highlight responsive-table">
+			<thead class="red lighten-3">
+				<!--headers, row0-->
+				<tr>
+					<th>Word</th>
+					<th>Pinyin</th>
+					<th>Meaning</th>
+					<th>Use in a sentence</th>
+				</tr>
+			</thead>
 
-		<tbody>
-			<!--row1-->
-			<tr>
-				<td id="cell1">cell1</td>
-				<td id="cell2">cell2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row2-->
-			<tr>
-				<td id="cell3">cell3</td>
-				<td id="cell4">cell4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row3-->
-			<tr>
-				<td>cell5</td>
-				<td>cell6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row4-->
-			<tr>
-				<td>cell7</td>
-				<td>cell8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row5-->
-			<tr>
-				<td>cell9</td>
-				<td>cell10</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row6-->
-			<tr>
-				<td>cell11</td>
-				<td>cell12</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<!--row7-->
-			<tr>
-				<td>cell13</td>
-				<td>cell14</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
-
-
+			<tbody>
+				<!--row1-->
+				<tr>
+					<td id="cell1">雇主注册</td>
+					<td id="cell2">Gu zu zhu ce</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row2-->
+				<tr>
+					<td id="cell3">cell3</td>
+					<td id="cell4">cell4</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row3-->
+				<tr>
+					<td>cell5</td>
+					<td>cell6</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row4-->
+				<tr>
+					<td>cell7</td>
+					<td>cell8</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row5-->
+				<tr>
+					<td>cell9</td>
+					<td>cell10</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row6-->
+				<tr>
+					<td>cell11</td>
+					<td>cell12</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!--row7-->
+				<tr>
+					<td>cell13</td>
+					<td>cell14</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 
 
 
-</div>
-<footer class="teal lighten-2"></footer>
 
 
-		<!--Below to setup Materialize-->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="materialize.min.js"></script>
-		<!--Above to setup Materialize-->
-		<script src="page2.js"></script>
-		<!--jQuery-->
-		<script>
-		$(document).ready(function(){
+	</div>
+	<footer class="teal lighten-2"></footer>
+
+
+	<!--Below to setup Materialize-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="materialize.min.js"></script>
+	<!--Above to setup Materialize-->
+	<script src="page2.js"></script>
+	<!--jQuery-->
+	<script>
+		$(document).ready(function () {
 			$('.tooltipped').tooltip();
-			});
-		</script>
+		});
+	</script>
 
 </body>
+
 </html>
